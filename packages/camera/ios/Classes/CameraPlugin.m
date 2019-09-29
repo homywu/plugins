@@ -308,9 +308,9 @@ FourCharCode const videoFormat = kCVPixelFormatType_32BGRA;
         break;
       }
     case high:
-      if ([_captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
-        _captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
-        _previewSize = CGSizeMake(1280, 720);
+      if ([_captureSession canSetSessionPreset:AVCaptureSessionPresetiFrame960x540]) {
+        _captureSession.sessionPreset = AVCaptureSessionPresetiFrame960x540;
+        _previewSize = CGSizeMake(960, 540);
         break;
       }
     case medium:
