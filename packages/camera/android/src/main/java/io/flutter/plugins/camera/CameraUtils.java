@@ -91,7 +91,7 @@ public final class CameraUtils {
         if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_720P)) {
           CamcorderProfile profile = CamcorderProfile.get(cameraId, CamcorderProfile.QUALITY_720P);
           profile.videoFrameRate = 24;
-          profile.videoBitRate = 1024 * 1000;
+          profile.videoBitRate = 2048 * 1000;
           return profile;
         }
       case medium:
