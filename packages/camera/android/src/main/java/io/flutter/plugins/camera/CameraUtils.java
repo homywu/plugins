@@ -89,7 +89,10 @@ public final class CameraUtils {
         }
       case high:
         if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_720P)) {
-          return CamcorderProfile.get(cameraId, CamcorderProfile.QUALITY_720P);
+          CamcorderProfile profile = CamcorderProfile.get(cameraId, CamcorderProfile.QUALITY_720P);
+          profile.videoFrameRate = 24;
+          profile.videoBitRate = 1024 * 1000;
+          return profile;
         }
       case medium:
         if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_480P)) {
